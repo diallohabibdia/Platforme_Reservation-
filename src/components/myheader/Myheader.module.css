@@ -1,0 +1,29 @@
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 20px;
+	background-color: #4c35f9; /* Bleu */
+	border-bottom: 2px solid #ddd;
+  }
+  
+  .logo {
+	flex-shrink: 0; /* Empêche le logo de rétrécir */
+  }
+  
+  .menu {
+	flex-shrink: 0; /* Empêche le menu de rétrécir */
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+	.header {
+	  flex-direction: column;
+	  text-align: center;
+	}
+  
+	.header h1 {
+	  margin: 10px 0;
+	}
+  }
+  

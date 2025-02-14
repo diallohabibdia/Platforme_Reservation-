@@ -1,0 +1,33 @@
+.menuItem {
+	padding: 5px 10px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	border-radius: 5px;
+}
+
+/* Appliquer le hover uniquement sur le <a> */
+.menuItem a:hover {
+	background-color: #8f9ef4;
+	border-radius: 5px;
+}
+
+/* Style du lien */
+.menuItem a {
+	display: block; /* Assure que le lien occupe tout l'espace cliquable */
+	padding: 5px 10px;
+	text-decoration: none;
+	color: #ffffff;
+	border-radius: 5px;
+}
+
+/* Style du lien actif */
+.menuItem.active a {
+	background-color: #8f9ef4;
+}
+
+/* Forcer le hover sur mobile en activant `:active` */
+@media (max-width: 768px) {
+	.menuItem:active {
+		background-color: #8f9ef4;
+	}
+}

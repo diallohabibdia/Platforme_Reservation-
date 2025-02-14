@@ -1,0 +1,14 @@
+/* Card.module.css */
+.card {
+	padding: 0px;
+	margin: 10px ;
+}
+.title {
+	color: blue;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+.description {
+	color: #555;
+	font-size: 1rem;
+}
