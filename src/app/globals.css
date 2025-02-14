@@ -1,0 +1,138 @@
+/* Styles généraux */
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 10vh;
+	background-color: #f3f4f6;
+	padding: 1rem;
+  }
+  
+  /* Carte de réservation */
+  .card {
+	background-color: #ffffff;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+	border-radius: 16px;
+	padding: 24px;
+	width: 100%;
+	max-width: 500px;
+  }
+  
+  /* Titre */
+  .card h1 {
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 1rem;
+  }
+  
+  /* Messages de disponibilité */
+  .message {
+	text-align: center;
+	font-weight: 500;
+	padding: 10px;
+	margin-bottom: 12px;
+	border-radius: 8px;
+  }
+  
+  .success {
+	background-color: #d1fae5;
+	color: #047857;
+  }
+  
+  .error {
+	background-color: #fee2e2;
+	color: #b91c1c;
+  }
+  
+  /* Formulaire */
+  .form-group {
+	margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+	display: block;
+	color: #374151;
+	font-weight: 500;
+	margin-bottom: 6px;
+  }
+  
+  .form-group input {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #d1d5db;
+	border-radius: 8px;
+	font-size: 1rem;
+	transition: border-color 0.2s;
+  }
+  
+  .form-group input:focus {
+	border-color: #3b82f6;
+	outline: none;
+	box-shadow: 0 0 4px rgba(59, 130, 246, 0.5);
+  }
+  
+  /* Boutons */
+  .button {
+	width: 100%;
+	padding: 12px;
+	font-weight: bold;
+	border-radius: 8px;
+	transition: all 0.2s;
+  }
+  
+  .button-primary {
+	background-color: #3b82f6;
+	color: white;
+  }
+  
+  .button-primary:hover {
+	background-color: #2563eb;
+  }
+  
+  .button-primary:disabled {
+	background-color: #93c5fd;
+	cursor: not-allowed;
+  }
+  
+  .button-success {
+	background-color: blue;
+	color: white;
+  }
+  
+  .button-success:hover {
+	background-color: #059669;
+  }
+  
+  .button-disabled {
+	background-color: #d1d5db;
+	color: #6b7280;
+	cursor: not-allowed;
+  }
+  
+  /* Indicateur de disponibilité */
+  .availability {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	padding: 10px;
+	border-radius: 8px;
+  }
+  
+  .available {
+	background-color: #d1fae5;
+	color: #047857;
+  }
+  
+  .unavailable {
+	background-color: #fee2e2;
+	color: #b91c1c;
+  }
+  
+  /* Icônes */
+  .icon {
+	width: 24px;
+	height: 24px;
+  }
+  

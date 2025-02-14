@@ -1,0 +1,60 @@
+/* Styles de base */
+.menu {
+	display: flex;
+	justify-content: center;
+}
+
+.menuList {
+	display: flex;
+	gap: 5px;
+	padding: 0;
+	list-style: none;
+}
+
+/* Bouton menu burger (mobile uniquement) */
+.menuButton {
+	display: none; /* Caché par défaut sur desktop */
+	background: none;
+	border: none;
+	cursor: pointer;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+
+/* Menu mobile (caché par défaut) */
+.mobileMenu {
+	position: absolute;
+	top: 50px;
+	right: 0;
+	background: #4c35f9;
+	width: 200px;
+	border-radius: 5px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	padding: 10px;
+}
+
+.mobileMenu ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.mobileMenu li {
+	padding: 10px;
+	text-align: center;
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
+	.menuList {
+		display: none; /* Cache le menu desktop sur mobile */
+	}
+
+	.menuButton {
+		display: block; /* Affiche le bouton menu burger */
+	}
+}
