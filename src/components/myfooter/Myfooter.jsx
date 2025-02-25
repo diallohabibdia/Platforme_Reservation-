@@ -3,9 +3,7 @@ import styles from "./Myfooter.module.css"; // Import du fichier CSS
 
 const Footer = () => {
   return (
-    
     <footer className={styles.footer}>
-        
       <div className={styles.container}>
         {/* Texte du footer */}
         <p>© {new Date().getFullYear()} Réservation Universitaire. Tous droits réservés.</p>
@@ -16,7 +14,6 @@ const Footer = () => {
           <a href="/confidentialite">Politique de confidentialité</a>
           <a href="/contact">Contact</a>
         </nav>
-      
       </div>
     </footer>
   );
