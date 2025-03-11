@@ -1,51 +1,66 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
-
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider  = "postgresql"
-  url       = env("DATABASE_URL")
-  directUrl = env("DIRECT_URL")
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
 }
-        
+
 model User {
-  id       String  @id @default(uuid())
-  name     String
-  email    String  @unique
-  password String
+  id           Int           @id @default(autoincrement())
+  username     String        @unique
+  email        String        @unique
+  password     String
+  role         String        @default("USER")
   reservations Reservation[]
 }
 
 model Salle {
-  id         String   @id @default(uuid())
-  name       String
-  capacite   Int
-  localisation String
-  batiment   String
-  equipements Equipment[]
-  reservations Reservation[]
+  id             Int             @id @default(autoincrement())
+  title          String          @unique
+  description    String
+  capacite       Int
+  localisation   String
+  batiment       String
+  imageUrl       String
+  disponibilites Disponibilite[]
+  reservations   Reservation[]
 }
 
-model Equipment {
-  id      String  @id @default(uuid())
-  name    String
-  salleId String
-  salle   Salle   @relation(fields: [salleId], references: [id])
+model Equipement {
+  id           Int                     @id @default(autoincrement())
+  name         String
+  imageUrl     String
+  reservations ReservationEquipement[]
 }
 
 model Reservation {
-  id       String @id @default(uuid())
-  date     DateTime
-  heure    String
-  userId   String
-  salleId  String
-  user     User   @relation(fields: [userId], references: [id])
-  salle    Salle  @relation(fields: [salleId], references: [id])
+  id          Int                     @id @default(autoincrement())
+  userId      Int
+  salleId     Int
+  date        DateTime
+  heure       String
+  user        User                    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  salle       Salle                   @relation(fields: [salleId], references: [id], onDelete: Cascade)
+  equipements ReservationEquipement[]
+}
+
+model ReservationEquipement {
+  id            Int         @id @default(autoincrement())
+  reservationId Int
+  equipementId  Int
+  equipement    Equipement  @relation(fields: [equipementId], references: [id], onDelete: Cascade)
+  reservation   Reservation @relation(fields: [reservationId], references: [id], onDelete: Cascade)
+   @@unique([reservationId, equipementId]) // Empêche les doublons
+}
+
+model Disponibilite {
+  id      Int      @id @default(autoincrement())
+  salleId Int
+  date    DateTime
+  heure   String
+  salle   Salle    @relation(fields: [salleId], references: [id], onDelete: Cascade)
+
+  @@unique([salleId, date, heure])
 }

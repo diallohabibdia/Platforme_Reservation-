@@ -1,0 +1,96 @@
+/* Container principal */
+.registerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f7fafc;
+    padding: 20px;
+  }
+  
+  /* Conteneur du formulaire */
+  .formContainer {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  /* Titre */
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #3182ce;
+  }
+  
+  /* Groupe d'input */
+  .inputGroup {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .inputGroup label {
+    font-size: 1rem;
+    color: #2d3748;
+  }
+  
+  .inputGroup input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  
+  /* Bouton d'inscription */
+  .submitButton {
+    background-color: #3182ce;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submitButton:hover {
+    background-color: #2b6cb0;
+  }
+  
+  /* Message d'erreur */
+  .error {
+    background-color: #f44336;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  /* Lien de redirection */
+  .redirect {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #4a5568;
+  }
+  
+  .redirect a {
+    color: #3182ce;
+    text-decoration: none;
+  }
+  
+  .redirect a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Conteneur d'image */
+  .imageContainer {
+    margin-top: 20px;
+    text-align: center;
+  }
+  

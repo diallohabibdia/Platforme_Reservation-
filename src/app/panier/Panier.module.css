@@ -1,27 +1,117 @@
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-  }
+  width: 80%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.reservations {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.reservationItem {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.reservationItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.reservationItem h3 {
+  font-size: 1.6rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.reservationItem p {
+  font-size: 1rem;
+  color: #555;
+  margin: 5px 0;
   
-  .title {
-    font-size: 28px;
-    font-weight: bold;
-    color: #4c35f9;
-    margin-bottom: 10px;
-  }
-  
-  .description {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 20px;
-  }
-  
-  .reservations {
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-  }
-  
+}
+
+.reservationItem ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.reservationItem li {
+  font-size: 1rem;
+  color: #444;
+}
+
+.reservationItem li + li {
+  margin-top: 5px;
+}
+
+.reservationItem .specialRequest {
+  font-style: italic;
+  color: #888;
+}
+
+.reservationItem .equipments {
+  margin-top: 10px;
+}
+
+.emptyCartMessage {
+  font-size: 1.2rem;
+  color: #888;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Sélecteur spécifique pour le bouton */
+.button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.deleteButton {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.deleteButton:hover {
+  background-color: #e60000;
+}

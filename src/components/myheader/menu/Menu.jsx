@@ -5,9 +5,9 @@ import styles from "./Menu.module.css";
 import Image from "next/image";
 
 const links = [
-	{ label: "Accueil", path: "/" },
+	{ label: "Accueil", path: "/accueil" },
 	{ label: "Salles et équipement reservés", path: "/panier" },
-	{ label: "Se connecter", path: "/login" },
+	{ label: "Deconnexion", path: "/login" },
 ];
 
 const Menu = () => {
